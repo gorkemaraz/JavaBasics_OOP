@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Lütfen ilk notu girin:");
+        int sayi1 = scanner.nextInt();
+        System.out.println("Lütfen ikinci notu girin:");
+        int sayi2 = scanner.nextInt();
+        System.out.println("Lütfen üçüncü notu girin:");
+        int sayi3 = scanner.nextInt();
+        System.out.println("Lütfen dördüncü notu girin:");
+        int sayi4 = scanner.nextInt();
+        System.out.println("Lütfen beşinci notu girin:");
+        int sayi5 = scanner.nextInt();
+      int gpa =(sayi1+sayi2+sayi3+sayi4+sayi5)/5;
+      switch(gpa) {
+          case 50:
+             System.out.println("Geçti");
+         break;
+          default:
+              if(gpa<50)
+              System.out.println("Kaldi");
+          else
+              System.out.println("Geçti");
+           break;
+      }
+
+    }
+}
