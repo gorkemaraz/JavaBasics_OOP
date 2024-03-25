@@ -1,0 +1,36 @@
+           */ Görkem Araz  */
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Lütfen Ayi giriniz:");
+        String Mevsim = scanner.next();
+        switch (Mevsim.toLowerCase()) {
+            case "ocak":
+            case "şubat":
+                System.out.println("Kış");
+                break;
+            case "mart":
+            case "nisan":
+            case "mayıs":
+                System.out.println("İlkbahar");
+                break;
+            case "haziran":
+            case "temmuz":
+            case "ağustos":
+                System.out.println("Yaz");
+                break;
+            case "eylül":
+            case "ekim":
+            case "kasım":
+                System.out.println("Sonbahar");
+                break;
+            default:
+                System.out.println("Bilinmeyen mevsim");
+                break;
+        }
+
+        scanner.close();
+    }
+}
