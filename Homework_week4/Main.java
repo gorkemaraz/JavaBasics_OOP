@@ -1,22 +1,23 @@
-import java.util.Scanner;
-
-//ortalama hesaplamak//
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static Scanner a = new Scanner(System.in);
     public static void main(String[] args) {
-
-        int toplam=0;
-
-        for(int i=1;i<=5;i++) {
-
-            System.out.println("notlarınızı girin:");
-            int not = a.nextInt();
-
-            toplam += not;
-
-
-        }
-        float ortalama=toplam/5;
-        System.out.println(ortalama);
+        String Str = "BURCİN";
+        char[] charStr = Str.toCharArray();
+        tersi(charStr);
+        String tersdStr = new String(charStr);
+        System.out.println("BURCİN yazısının tersten yazılısı: " + tersdStr);
     }
+        public static void tersi ( char[] charStr){
+            int sol = 0;
+            int sag = charStr.length - 1;
+
+            while (sol < sag) {
+                char a = charStr[sol];
+                charStr[sol] = charStr[sag];
+                charStr[sag] = a;
+                sol++;
+                sag--;
+            }
+        }
 }
